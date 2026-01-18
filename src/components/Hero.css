@@ -1,55 +1,53 @@
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-    background-color: #f4f4f4; /* Gris très clair */
-    gap: 50px; /* Espace entre texte et image */
-    flex-wrap: wrap; /* Pour que ça passe l'un sous l'autre sur mobile */
+  min-height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 60px;
 }
 
-.hero-content {
-    max-width: 600px;
+.hero-label {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #333;
+.hero-main h1 {
+  font-size: clamp(3rem, 10vw, 8rem); 
+  font-weight: 800;
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: -2px; 
+  margin: 40px 0;
 }
 
-.highlight {
-    color: #61dafb; /* Bleu React */
+.hero-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
 }
 
-.hero-content h2 {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 20px;
+
+.intro-text {
+  max-width: 400px;
+  font-size: 1.1rem;
+  text-align: right;
+  font-weight: 500;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #555;
-}
-
-.hero-image img {
-    border-radius: 50%; /* Image ronde */
-    border: 5px solid white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+@media (max-width: 768px) {
+  .hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .intro-text {
+    text-align: left;
+  }
 }

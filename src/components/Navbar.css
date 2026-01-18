@@ -2,29 +2,95 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+    height: 80px;
+    box-sizing: border-box;
 }
 
-.navbar-logo {
-    font-size: 1.5rem;
+.navbar.at-top {
+    background-color: rgba(255, 255, 255, 0.005);
+    box-shadow: none;
+    opacity: 1;
+}
+
+.navbar.at-bottom {
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.my-name {
+    color: rgb(0, 0, 0);
     font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .navbar-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .navbar-links a {
-    color: white;
+    color: #F6F1E3;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-    color: #61dafb; /* Le bleu React ! */
+    color: #ff9900;
+}
+
+.navbar.text-white .my-name,
+.navbar.text-white .navbar-links a {
+    color: white;
+}
+
+.navbar.text-dark .my-name,
+.navbar.text-dark .navbar-links a {
+    color: #000000;
+}
+
+.navbar.text-dark .navbar-links a:hover {
+    color: #ff9900;
+}
+
+.navbar.text-dark img {
+    filter: invert(1); 
+}
+@media (max-width: 768px) {
+    .navbar { padding: 1rem 20px; }
+    .navbar-links { display: none; }
 }
