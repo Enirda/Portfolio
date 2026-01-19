@@ -7,17 +7,50 @@
   padding-bottom: 60px;
 }
 
+.hero-portfolio-img{
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0; 
+    position: relative;
+    left: 110px;
+}
+
+.p-text {
+    font-size: clamp(3rem, 12vw, 10rem); 
+    line-height: 0.9;
+    margin: 0;
+    font-family: 'Times New Roman', serif; 
+    font-weight: 900;
+}
+
+.filled {
+    color: #f0f0f0;
+}
+
+.outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #ff9900;    
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-color: red; 
+}
+
 .hero-label {
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #666;
-  border-bottom: 1px solid #ccc;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
   padding-bottom: 20px;
 }
 
 .hero-main h1 {
-  font-size: clamp(3rem, 10vw, 8rem); 
+  font-size: clamp(3rem, 5vw, 8rem); 
   font-weight: 800;
   line-height: 0.9;
   text-transform: uppercase;

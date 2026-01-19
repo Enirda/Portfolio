@@ -8,6 +8,15 @@ const Hero = () => {
         <p className="hero-label">PORTFOLIO 2026 - ADRIEN BAYSSAT</p>
       </div>
       
+      <div className="hero-portfolio-img">
+        <h2 className="p-text filled">PORTFOLIO</h2>
+        <div className='hero-image'>
+          <img src="/logo.png" alt="Portrait" />
+        </div>         
+        <h2 className="p-text outline">PORTFOLIO</h2>
+        <h2 className="p-text outline">PORTFOLIO</h2>
+      </div>
+
       <div className="hero-main">
         <h1>
           CREATIVE<br />

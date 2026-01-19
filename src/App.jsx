@@ -8,21 +8,16 @@ function App() {
     <div>
       <Navbar />
       
-      <div id="home">
+      <div id="about">
         <Hero />
       </div>
       
-      <div id="about" className="container light-section" style={{padding: '100px 40px',
+      <div id="resume" className="container light-section" style={{padding: '100px 40px',
                                                                   backgroundColor: '#F6F1E3',
                                                                   width: '100%',
                                                                   color: 'black'}}>
-        
       </div>
-
-      <div id="resume" className="container" style={{ padding: '100px 40px' }}>
-        
-      </div>
-
+      
     <Footer /> 
     </div>
 
